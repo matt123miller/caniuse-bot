@@ -13,6 +13,10 @@ const browserData: BrowserData[] = [
         DisplayName: 'Internet Explorer',
         CiuCode: 'ie'
     },
+    { 
+        DisplayName: 'Edge',
+        CiuCode: 'edge'
+    },
     {
         DisplayName: 'Safari',
         CiuCode: 'safari'
