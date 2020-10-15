@@ -1,4 +1,4 @@
-import { BrowserData } from "./Interfaces";
+import { BrowserData } from "./Interfaces.js";
 
 const browserData: BrowserData[] = [
     {

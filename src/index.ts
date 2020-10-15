@@ -1,8 +1,8 @@
 import caniuse from 'caniuse-api';
 import fetch from 'node-fetch';
 
-import {default as defaultBrowsers} from './defaultSupportedBrowsers';
-import { CIUOutput, CIUSupportData, BrowserData } from './Interfaces';
+import { default as defaultBrowsers } from './defaultSupportedBrowsers.js';
+import { CIUOutput, CIUSupportData, BrowserData } from './Interfaces.js';
 
 
 async function wrapper(feature: string) {

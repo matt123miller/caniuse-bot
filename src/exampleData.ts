@@ -1,4 +1,4 @@
-import { CIUOutput } from "./Interfaces";
+import { CIUOutput } from "./Interfaces.js";
 
 
 /**
