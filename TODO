@@ -1,3 +1,8 @@
+# NPM details
+☐ Make this a monorepo for the core, cli wrapper and subsequent wrappers
+☐ Restructure the folders and all that.
+☐ Publish some sort of squatting npm package
+
 # Core
 ☐ Make a proper d.ts file like a real project
 ✔ Return either a nice data object or a string array of multiple choices, letting consumer decide how to use it. @done(20-10-17 14:35)
