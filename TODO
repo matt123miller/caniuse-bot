@@ -1,0 +1,23 @@
+# Core
+☐ Make a proper d.ts file like a real project
+☐ Return either a nice data object or a string array of multiple choices, letting consumer decide how to use it.
+☐ Create that formatted return object
+
+# CLI wrapper
+☐ Find a proper way of making CLI interaction.
+    ☐ Investigate
+✔ When a user enters a feature that has multiple options such as `class` we should return the array of different options @done(20-10-17 14:33)
+☐ Prompt the user to select which option they meant @started(20-10-17 14:33)
+    - For example Avrae does the following 
+    ```
+    Multiple Matches Found
+    Which one were you looking for? (Type the number or "c" to cancel)
+    [1] - Cure Wounds
+    [2] - Mass Cure Wounds
+    [3] - Commune
+    [4] - Conjure Fey
+    [5] - Bestow Curse
+    [6] - Blur
+    ```
+    ☐ Tie this prompt into whatever CLI interaction library I use.
+
