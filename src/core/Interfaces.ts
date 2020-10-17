@@ -2,6 +2,8 @@
 
 export {
     BrowserData,
+    OutputData,
+    GatheredOutputData
     // CIUOutput,
     // CIUSupportData
 } 
@@ -12,6 +14,15 @@ interface BrowserData {
     CiuCode: string
 }   
 
+interface OutputData { 
+    [browser: string]: number;
+}
+
+interface GatheredOutputData {
+    noSupport: OutputData,
+    partialSupport: OutputData,
+    fullSupport: OutputData
+}
 
 // interface CIUSupportData {
 //     /** Supported from this version onwards */

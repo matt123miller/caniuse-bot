@@ -1,7 +1,7 @@
 # Core
 ☐ Make a proper d.ts file like a real project
-☐ Return either a nice data object or a string array of multiple choices, letting consumer decide how to use it.
-☐ Create that formatted return object
+✔ Return either a nice data object or a string array of multiple choices, letting consumer decide how to use it. @done(20-10-17 14:35)
+✔ Create that formatted return object @done(20-10-17 14:35)
 
 # CLI wrapper
 ☐ Find a proper way of making CLI interaction.
