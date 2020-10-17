@@ -1,10 +1,10 @@
-import { CIUOutput } from "./Interfaces.js";
+import { BrowserSupport } from "caniuse-api";
 
 
 /**
  * This was the output for css-grid
  *  */
-const exampleData : CIUOutput = {
+const exampleData : BrowserSupport = {
     and_chr: { y: 81 },
     and_ff: { y: 68 },
     and_qq: { y: 10.4 },
