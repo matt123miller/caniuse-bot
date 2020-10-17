@@ -8,7 +8,7 @@
     ☐ Investigate
 ✔ When a user enters a feature that has multiple options such as `class` we should return the array of different options @done(20-10-17 14:33)
 ✔ Prompt the user to select which option they meant @started(20-10-17 14:33) @done(20-10-17 14:39) @lasted(6m21s)
-    - For example Avrae does the following 
+    - For example Avrae does the following when you enter "!spell cure"
     ```
     Multiple Matches Found
     Which one were you looking for? (Type the number or "c" to cancel)
