@@ -1,10 +1,10 @@
 # NPM details
-☐ Make this a monorepo for the core, cli wrapper and subsequent wrappers
-☐ Restructure the folders and all that.
+✔ Make this a monorepo for the core, cli wrapper and subsequent wrappers @done(20-10-19 22:02)
+✔ Restructure the folders and all that. @done(20-10-19 22:02)
 ☐ Publish some sort of squatting npm package
 
 # Core
-☐ Make a proper d.ts file like a real project
+✔ Make a proper d.ts file like a real project @done(20-10-19 22:02)
 ✔ Return either a nice data object or a string array of multiple choices, letting consumer decide how to use it. @done(20-10-17 14:35)
 ✔ Create that formatted return object @done(20-10-17 14:35)
 
