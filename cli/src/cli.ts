@@ -1,6 +1,6 @@
-import searchForFunctionality from './core/searchForFunctionality'
+import { searchForFunctionality } from 'caniuse-bot-core';
 
-export default function () {
+export function cli () {
   const feature = 'grid';
   const result = searchForFunctionality(feature);
 

@@ -1,24 +1,24 @@
 
 
-export {
-    BrowserData,
-    OutputData,
-    GatheredOutputData
-    // CIUOutput,
-    // CIUSupportData
-} 
+// export default {
+//     BrowserData,
+//     OutputData,
+//     GatheredOutputData
+//     // CIUOutput,
+//     // CIUSupportData
+// } 
 
 
-interface BrowserData {
+export interface BrowserData {
     DisplayName: String, 
     CiuCode: string
 }   
 
-interface OutputData { 
+export interface OutputData { 
     [browser: string]: number;
 }
 
-interface GatheredOutputData {
+export interface GatheredOutputData {
     noSupport: OutputData,
     partialSupport: OutputData,
     fullSupport: OutputData
