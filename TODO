@@ -1,7 +1,9 @@
 # NPM details
 ✔ Make this a monorepo for the core, cli wrapper and subsequent wrappers @done(20-10-19 22:02)
 ✔ Restructure the folders and all that. @done(20-10-19 22:02)
-☐ Publish some sort of squatting npm package
+✘ Publish some sort of squatting npm package @cancelled(20-10-19 23:12)
+✔ Publish a real package with a license and proper files included and all that @done(20-10-19 23:13)
+☐ Investigate a publish and tag strategy
 
 # Core
 ✔ Make a proper d.ts file like a real project @done(20-10-19 22:02)

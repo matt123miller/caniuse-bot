@@ -1,6 +1,10 @@
-# CANIUSE-BOT
+# caniuse-bot
 
 A monorepo for a simple but useful set of tools for interacting with the [Can I Use](https://caniuse.com/) data.
+
+- [The core]('./core/README.md') :rocket:
+- [The cli]('./cli/README.md') :computer:
+- [Slack....one day]('./cli/README.md') :watch:
 
 ## TODO
 
