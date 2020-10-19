@@ -1,11 +1,13 @@
 {
     "name": "caniuse-bot",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "A simple wrapper around caniuse-api to simplify me making a few other projects",
     "author": "matt123miller",
     "license": "MIT",
     "homepage": "https://github.com/matt123miller/caniuse-bot",
-    "keywords": ["caniuse"],
+    "keywords": [
+        "caniuse"
+    ],
     "repository": {
         "type": "git",
         "url": "git+https://github.com/matt123miller/caniuse-bot.git"
