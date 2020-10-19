@@ -1,6 +1,6 @@
 import { BrowserData } from "./Interfaces.js";
 
-const browserData: BrowserData[] = [
+const defaultBrowsers: BrowserData[] = [
     {
         DisplayName:'Firefox',
         CiuCode: 'firefox'
@@ -23,4 +23,4 @@ const browserData: BrowserData[] = [
     }
 ];
 
-export default browserData;
+export { defaultBrowsers };

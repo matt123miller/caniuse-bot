@@ -1,11 +1,10 @@
 import { BrowserSupport, getSupport, find as ciuFind } from 'caniuse-api';
-import fetch from 'node-fetch';
 
-import { default as defaultBrowsers } from './defaultSupportedBrowsers.js';
+import { defaultBrowsers } from './defaultSupportedBrowsers.js';
 import { OutputData, GatheredOutputData, BrowserData } from './Interfaces.js';
 
 
-export default function searchForFunctionality(feature: string) : String[] | GatheredOutputData {
+export function searchForFunctionality(feature: string) : String[] | GatheredOutputData {
 
   try {
     const findResults = ciuFind(feature);
@@ -26,7 +25,7 @@ export default function searchForFunctionality(feature: string) : String[] | Gat
 }
 
 function gatherSupportDataFor(findResults: string): GatheredOutputData {
-  const useAllBrowsers = false; // TODO:
+  const useAllBrowsers = false; // TODO: Make better
   const searchResult = getSupport(findResults);
   const extractedData = extractBrowserData(searchResult, useAllBrowsers);
   return extractedData;
