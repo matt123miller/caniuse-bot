@@ -1,4 +1,4 @@
-import { searchForFunctionality } from 'caniuse-bot-core';
+import { searchForFunctionality } from 'caniuse-bot';
 
 export function cli () {
   const feature = 'grid';
