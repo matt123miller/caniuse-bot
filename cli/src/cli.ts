@@ -1,35 +1,50 @@
 import { searchForFunctionality } from 'caniuse-bot';
+import { program } from 'commander';
+import * as pkg from '../package.json';
 
-export function cli () {
-  const feature = 'grid';
-  const result = searchForFunctionality(feature);
+program
+  .version(pkg.version)
+  .command('ciu [arg]')
+  .description('the description')
+  .action((arg, options) => {
+    console.log(arg);
+    
+  })
 
 
-  console.log('Pretend the user just entered "ciu grid"');
-  // @ts-ignore
-  console.log(formatMultipleMatches(searchForFunctionality('grid')));
+program.parse(process.argv);
 
-  console.log('pretend the user just entered "1"');
 
-  // @ts-ignore
-  console.log();
 
-  console.log(`feature css-grid is supported like so: `,
-    searchForFunctionality('css-grid')
-);
+
+// export function cli () {
+//   const feature = 'grid';
+//   const result = searchForFunctionality(feature);
+
+
+//   console.log('Pretend the user just entered "ciu grid"');
+//   // @ts-ignore
+//   console.log(formatMultipleMatches(searchForFunctionality('grid')));
+
+//   console.log('pretend the user just entered "1"');
+
+//   // @ts-ignore
+//   console.log();
+
+//   console.log(`feature css-grid is supported like so: `, searchForFunctionality('css-grid'));
 
   
-  // if (Array.isArray(result)) {
-  //   // @ts-ignore
-  //   const userPrompt = formatMultipleMatches(result);
-  //   console.log(userPrompt);
+//   // if (Array.isArray(result)) {
+//   //   // @ts-ignore
+//   //   const userPrompt = formatMultipleMatches(result);
+//   //   console.log(userPrompt);
 
-  // }
-  // else {
-  //   console.log(`feature ${feature} is supported like so: `, result);
+//   // }
+//   // else {
+//   //   console.log(`feature ${feature} is supported like so: `, result);
 
-  // }
-}
+//   // }
+// }
 
 function formatMultipleMatches(matches: string[]): string {
   return [
