@@ -14,35 +14,40 @@ program
 // @ts-ignore
 program.parse(process.argv);
 
-
-
-
 function parsingCommand(feature: string, options: object): void  {
   const result = searchForFunctionality(feature);
 
   if (Array.isArray(result)) {
-    // @ts-ignore
     const userPrompt = formatMultipleMatches(result);
     console.log(userPrompt);
-
   }
   else {
-    console.log(`feature ${feature} is supported like so: \n`, generateTableOfResults(result));
+    console.log(`${feature} is supported in the following browsers`)
+    console.log(generateTableOfResults(result));
+    console.log(`For more information see https://caniuse.com/?search=${feature}`)
   }
 };
 
-function generateTableOfResults(results:any) : string {
+function generateTableOfResults(results:GatheredOutputData) : string {
 
+  const allBrowserKeys = [...Object.keys(results.fullSupport), ...Object.keys(results.partialSupport), ...Object.keys(results.noSupport)]
+  const uniqueBrowserNames = Array.from(new Set(allBrowserKeys));
+  
+  
   const table = new Table({
-    head: ['1', '2']
+    head: ['Browsers:', ...uniqueBrowserNames]
   });
 
-  table.push(['value 1', 'value 2'])
-
-
-
+  table.push(generateTableRow('No Support', results.noSupport));
+  table.push(generateTableRow('Partial Support', results.partialSupport));
+  table.push(generateTableRow('Full Support', results.fullSupport));
 
   return table.toString();
+
+  function generateTableRow(rowTitle: string, supportData: OutputData) : string[] {
+    const row: string[] = uniqueBrowserNames.map(b => supportData[b]?.toString() ?? '');
+    return [rowTitle, ...row];
+  }
 }
 
 function formatMultipleMatches(matches: string[]): string {
@@ -51,4 +56,15 @@ function formatMultipleMatches(matches: string[]): string {
     'Try again using one of the following commands',
     ...matches.map((match, i) => `    - ciu ${match}`)
   ].join('\n')
+}
+
+
+interface OutputData {
+  [browser: string]: number;
+}
+
+interface GatheredOutputData {
+  noSupport: OutputData,
+  partialSupport: OutputData,
+  fullSupport: OutputData
 }
