@@ -3,7 +3,7 @@ import { BrowserSupport, getSupport, find as ciuFind } from 'caniuse-api';
 import { defaultBrowsers } from './defaultSupportedBrowsers.js';
 import { OutputData, GatheredOutputData, BrowserData } from './Interfaces.js';
 
-export function searchForFunctionality(feature: string): String[] | GatheredOutputData {
+export function searchForFunctionality(feature: string): GatheredOutputData | String[] {
   try {
     const findResults = ciuFind(feature);
 
