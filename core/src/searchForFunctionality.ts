@@ -3,25 +3,21 @@ import { BrowserSupport, getSupport, find as ciuFind } from 'caniuse-api';
 import { defaultBrowsers } from './defaultSupportedBrowsers.js';
 import { OutputData, GatheredOutputData, BrowserData } from './Interfaces.js';
 
-
-export function searchForFunctionality(feature: string) : String[] | GatheredOutputData {
-
+export function searchForFunctionality(feature: string): String[] | GatheredOutputData {
   try {
     const findResults = ciuFind(feature);
 
     if (Array.isArray(findResults)) {
       return findResults;
-    }
-    else {
+    } else {
       const extractedData = gatherSupportDataFor(findResults);
-      return extractedData
+      return extractedData;
     }
-  } 
-  catch (error) {
-    console.error(error)
+  } catch (error) {
+    console.error(error);
   }
 
-  return <GatheredOutputData>{}
+  return <GatheredOutputData>{};
 }
 
 function gatherSupportDataFor(findResults: string): GatheredOutputData {
@@ -31,9 +27,7 @@ function gatherSupportDataFor(findResults: string): GatheredOutputData {
   return extractedData;
 }
 
-
 function extractBrowserData(data: BrowserSupport, all = false): GatheredOutputData {
-
   let relevantBrowsers: BrowserSupport = data;
 
   if (all === false) {
@@ -47,10 +41,9 @@ function extractBrowserData(data: BrowserSupport, all = false): GatheredOutputDa
   const fullSupport: OutputData = {};
   const partialSupport: OutputData = {};
   const noSupport: OutputData = {};
-  
-  Object.entries(relevantBrowsers).forEach(([browser, data]) => {
 
-    if(data.n) {
+  Object.entries(relevantBrowsers).forEach(([browser, data]) => {
+    if (data.n) {
       noSupport[browser] = data.n;
     }
     if (data.p) {
@@ -59,7 +52,7 @@ function extractBrowserData(data: BrowserSupport, all = false): GatheredOutputDa
     if (data.y) {
       fullSupport[browser] = data.y;
     }
-  })
+  });
 
   return { fullSupport, partialSupport, noSupport };
 }

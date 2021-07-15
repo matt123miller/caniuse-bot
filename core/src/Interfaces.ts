@@ -1,32 +1,21 @@
-
-
-// export default {
-//     BrowserData,
-//     OutputData,
-//     GatheredOutputData
-//     // CIUOutput,
-//     // CIUSupportData
-// } 
-
-
 export interface BrowserData {
-    DisplayName: String, 
-    CiuCode: string
-}   
+  DisplayName: String;
+  CiuCode: string;
+}
 
-export interface OutputData { 
-    [browser: string]: number;
+export interface OutputData {
+  [browser: string]: number;
 }
 
 export interface GatheredOutputData {
-    noSupport: OutputData,
-    partialSupport: OutputData,
-    fullSupport: OutputData
+  noSupport: OutputData;
+  partialSupport: OutputData;
+  fullSupport: OutputData;
 }
 
 // interface CIUSupportData {
 //     /** Supported from this version onwards */
-//     y?: number, 
+//     y?: number,
 //     /** Unsupported up to and including this version */
 //     n?: number,
 //     /** Partial support from this version onwards */

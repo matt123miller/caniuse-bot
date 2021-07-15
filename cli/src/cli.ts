@@ -8,19 +8,13 @@ program
   .description('the description')
   .action((arg, options) => {
     console.log(arg);
-    
-  })
-
+  });
 
 program.parse(process.argv);
-
-
-
 
 // export function cli () {
 //   const feature = 'grid';
 //   const result = searchForFunctionality(feature);
-
 
 //   console.log('Pretend the user just entered "ciu grid"');
 //   // @ts-ignore
@@ -33,7 +27,6 @@ program.parse(process.argv);
 
 //   console.log(`feature css-grid is supported like so: `, searchForFunctionality('css-grid'));
 
-  
 //   // if (Array.isArray(result)) {
 //   //   // @ts-ignore
 //   //   const userPrompt = formatMultipleMatches(result);
@@ -50,6 +43,6 @@ function formatMultipleMatches(matches: string[]): string {
   return [
     'Multiple matches found. Which one were you looking for?',
     'Type the number or "c" to cancel.',
-    ...matches.map((match, i) => `    [${i+1}] - ${match}`)
-  ].join('\n')
+    ...matches.map((match, i) => `    [${i + 1}] - ${match}`),
+  ].join('\n');
 }
