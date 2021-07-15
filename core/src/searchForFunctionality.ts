@@ -1,11 +1,16 @@
 import { BrowserSupport, getSupport, find as ciuFind } from 'caniuse-api';
+import pkg from '../package.json';
 
-import { defaultBrowsers } from './defaultSupportedBrowsers.js';
-import { OutputData, GatheredOutputData, BrowserData } from './Interfaces.js';
+import { defaultBrowsers } from './defaultSupportedBrowsers';
+import { OutputData, GatheredOutputData, BrowserData } from './Interfaces';
 
-export function searchForFunctionality(feature: string): GatheredOutputData | String[] {
+export function searchForFunctionality(feature: string): GatheredOutputData | string[] {
   try {
-    const findResults = ciuFind(feature);
+    if (feature === '') {
+      throw new RangeError(`An empty string isn't acceptable input.`);
+    }
+    // TODO: Update the typings in definitelytyped
+    const findResults: string | string[] = ciuFind(feature);
 
     if (Array.isArray(findResults)) {
       return findResults;
@@ -14,19 +19,24 @@ export function searchForFunctionality(feature: string): GatheredOutputData | St
       return extractedData;
     }
   } catch (error) {
-    console.error(error);
+    console.info(`Error thrown: ${error.message}\nPlease report this issue at ${pkg.bugs.url}`);
+    throw error;
   }
-
-  return <GatheredOutputData>{};
 }
 
 function gatherSupportDataFor(findResults: string): GatheredOutputData {
-  const useAllBrowsers = false; // TODO: Make better
+  const useAllBrowsers = false; // TODO: Make better. Default arg maybe?
   const searchResult = getSupport(findResults);
   const extractedData = extractBrowserData(searchResult, useAllBrowsers);
   return extractedData;
 }
 
+/**
+ * Take the data returned by caniuse-api and reformat it into something easier to work with
+ * @param data
+ * @param all Currently I'm only supporting the default browsers. Will add different options in future
+ * @returns An object summarising the different support data
+ */
 function extractBrowserData(data: BrowserSupport, all = false): GatheredOutputData {
   let relevantBrowsers: BrowserSupport = data;
 
