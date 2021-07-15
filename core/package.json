@@ -1,6 +1,6 @@
 {
   "name": "caniuse-bot",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "A simple wrapper around caniuse-api to simplify me making a few other projects",
   "author": "matt123miller",
   "license": "MIT",
