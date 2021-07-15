@@ -14,8 +14,12 @@ I'm a big fan of that extension.
 
 ## Publishing
 
-Relies on [the np package](https://www.npmjs.com/package/np). At the moment I'm running this in whichever fodler I want to publish:
+Relies on [the np package](https://www.npmjs.com/package/np) installed globally. It's interactive so I go through it's menus. At the moment I'm running this in whichever folder I want to publish:
 
-`np --no-tests`
+Preview first to check everything
 
-I'll add tests at some point....
+`np --no-yarn --preview`
+
+If I'm happy with the changes then do it for real. See the docs for details
+
+`np --no-yarn`
