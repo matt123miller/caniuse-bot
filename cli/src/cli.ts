@@ -8,6 +8,7 @@ program
   .description('the description')
   .action((arg, options) => {
     console.log(arg);
+    console.log(options)
   });
 
 program.parse(process.argv);

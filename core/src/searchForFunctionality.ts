@@ -24,6 +24,11 @@ export function searchForFunctionality(feature: string): GatheredOutputData | st
   }
 }
 
+/**
+ * Transforms the results from caniuse-api into something a big friendlier for consumption
+ * @param findResults 
+ * @returns 
+ */
 function gatherSupportDataFor(findResults: string): GatheredOutputData {
   const useAllBrowsers = false; // TODO: Make better. Default arg maybe?
   const searchResult = getSupport(findResults);

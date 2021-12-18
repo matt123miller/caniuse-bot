@@ -2,7 +2,7 @@
 
 This is a simple wrapper around caniuse-api to simplify me making a few other projects.
 
-All the data return should match what's used on [www.caniuse.com](https://canius.com).
+All the data return should match what's used on [www.caniuse.com](https://caniuse.com).
 
 ## Installation
 
@@ -10,7 +10,7 @@ All the data return should match what's used on [www.caniuse.com](https://canius
 
 ## Usage
 
-The main usage of this package is the `searchForFunctionality` function. 
+The main usage of this package is the `searchForFunctionality` function.
 Provided with a string it will try and find and format the corresponding date from caniuse.
 
 ```TypeScript
@@ -48,4 +48,4 @@ Contributions welcome! Though at this point I don't know what there is to add.
 
 ## License
 
-This project is MIT licensed. 
+This project is MIT licensed.
