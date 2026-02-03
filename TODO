@@ -5,6 +5,10 @@
 ✔ Publish a real package with a license and proper files included and all that @done(20-10-19 23:13)
 ☐ Investigate a publish and tag strategy
 
+# General
+☐ Make each project set a rootdir and outdir in the tsconfig.json to simplify commands
+  ☐ Set main in package.json to match the outdir and npm start can likely just run node . 
+
 # Core
 ✔ Make a proper d.ts file like a real project @done(20-10-19 22:02)
 ✔ Return either a nice data object or a string array of multiple choices, letting consumer decide how to use it. @done(20-10-17 14:35)
@@ -30,3 +34,4 @@
 
 # Testing
 ☐ One day
+
