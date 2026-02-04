@@ -19,21 +19,21 @@ Each package has its own `package.json` and `tsconfig.json`. There is no workspa
 
 ### Core Package (core/)
 ```bash
-npm run build     # Compile TypeScript
-npm run test      # Run Jest tests
-npm run watch     # TypeScript watch mode
+bun run build     # Compile TypeScript
+bun test          # Run Bun tests
+bun run watch     # TypeScript watch mode
 ```
 
 ### CLI Package (cli/)
 ```bash
-npm run build     # Compile TypeScript
-npm run start     # Build and run
+bun run build     # Compile TypeScript
+bun run start     # Build and run
 ```
 
 ### Discord Package (discord/)
 ```bash
-npm run build     # Compile TypeScript
-npm run start     # Requires DOTENV_CONFIG_PATH=.env with TOKEN and CLIENTID
+bun run build     # Compile TypeScript
+bun run start     # Requires DOTENV_CONFIG_PATH=.env with TOKEN and CLIENTID
 ```
 
 ## Architecture

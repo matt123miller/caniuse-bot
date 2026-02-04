@@ -19,7 +19,8 @@ export function searchForFunctionality(feature: string): GatheredOutputData | st
       return extractedData;
     }
   } catch (error) {
-    console.info(`Error thrown: ${error.message}\nPlease report this issue at ${pkg.bugs.url}`);
+    const message = error instanceof Error ? error.message : String(error);
+    console.info(`Error thrown: ${message}\nPlease report this issue at ${pkg.bugs.url}`);
     throw error;
   }
 }

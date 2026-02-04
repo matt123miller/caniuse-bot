@@ -1,3 +1,4 @@
+import { test, expect } from 'bun:test';
 import { GatheredOutputData } from './Interfaces';
 import { searchForFunctionality } from './searchForFunctionality';
 
